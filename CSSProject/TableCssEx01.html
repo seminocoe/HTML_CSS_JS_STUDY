@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>성적표</title>
+
+    <style>
+        h3 { text-align: center; }
+
+        table { border-collapse: collapse; }
+
+        td,th { text-align: left; padding: 5px;
+                height: 15px; width: 100px; }
+
+        thead,tfoot { background: darkgrey; color: yellow; }
+        
+        tbody tr:nth-child(even) { background: aliceblue; }
+
+        tbody tr:hover { background: pink; }        
+
+    </style>
+
+</head>
+<body>
+
+<h3> 성적표 </h3>
+    <hr>
+    <table>
+        
+        <thead> <!-- 머리 셀 -->
+            <tr><th>이름</th><th>자바</th><th>디비</th></tr>
+        </thead>
+   
+        <tbody> <!-- 바디 -->
+            <tr><td>홍길동</td><td>80</td><td>60</td></tr>
+            <tr><td>김유신</td><td>100</td><td>80</td></tr>
+            <tr><td>나길동</td><td>80</td><td>70</td></tr>
+            <tr><td>강감찬</td><td>90</td><td>90</td></tr>
+        </tbody>
+
+        <tfoot> <!-- 풋 -->
+            <th>합계</th><th>350</th><th>300</th>
+        </tfoot>
+    
+    </table>
+
+</body>
+</html>

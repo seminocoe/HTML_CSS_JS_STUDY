@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>window</title>
+  <script>
+    function open1() {
+      //새창 띄우기
+      window.open('Open.html');
+    }
+    function open2() {
+      //마우스를 클릭할 때 마다 새로 열리는 창
+      window.open('Open.html','','width=300, height=500,scrollbars=no,toolbar=no,menubar=no,location=no');
+    }
+    function open3(url) {
+      window.open(url,'mywin','width=300, height=500,scrollbars=no,toolbar=no,menubar=no,status=no,location=no');
+    }
+
+    document.write("<p>문서의 url 주소 : "+location.href+"</p>");
+    document.write("<p>호스트 이름과 포트 : "+location.host+"</p>");
+    document.write("<p>호스트 컴퓨터 이름 : "+location.hostname+"</p>");
+  </script>
+</head>
+<body>
+  <h1>window</h1>
+  <h3>open 메소드</h3>
+  <div>
+    <a href="#" onclick="open1(); return false;">새창 열기</a>
+    <br>
+    <a href="#" onclick="open2(); return false;">팝업창 열기</a>
+    <br>
+    <a href="#" onclick="open3('https://www.naver.com'); return false;">네이버 열기</a>
+    <br>
+  </div>
+</body>
+</html>

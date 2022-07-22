@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>div에 그림자 효과</title>
+
+    <style>
+        div { width: 150px; height: 70px; padding: 10px; 
+              border: 10px solid lightgray;
+              background-image: url("../img/spongebob.jpg");
+              background-size: 150px 100px; 
+              background-repeat: no-repeat; }
+
+        .redBox { box-shadow: 10px 10px red; }
+        .blurBox { box-shadow: 10px 10px 5px skyblue; }      
+        .multiEffect { box-shadow: 2px 2px 2px black, 
+                                   0px 0px 25px blue,
+                                   0 0 5px darkblue; }  /* 0은 px 단위 생략가능 */          
+
+    </style>
+
+</head>
+<body>
+    <h3>박스 그림자</h3>
+    <hr>
+    <div class="redBox">스폰지 밥</div>
+    <br>
+    <div class="blurBox">스폰지 밥</div>
+    <br>
+    <div class="multiEffect">스폰지 밥</div>
+    <br>
+    <hr>
+    <p style="cursor: progress;">프로그램 실행중 마우스 모양</p>
+    <p style="cursor: wait;">기다리는 중 마우스 모양</p>
+
+    <div style="display: none;">display(none)</div>
+    <div style="display: inline;">display(inline)</div>
+    <div style="display: inline-block;">display(inline-block)</div>
+
+</body>
+</html>

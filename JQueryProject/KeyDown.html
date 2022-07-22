@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>키 이벤트</title>
+  <link rel="stylesheet" type="text/css"
+  href="../css/event.css">
+  <script type="text/javascript" 
+  src="../js/jquery-1.11.0.js"></script>
+
+  <script>
+    $(function () {
+      //키가 눌러졌을 때 카운트 변수 선언
+      var down_count = 0;
+      //키가 떨어졌을 때 카운트 변수 선언
+      var up_count = 0;
+      
+      $("#input>input[type='text']").keydown(
+        function () {
+          //down_count 변수 증가
+          down_count++;
+          $("#result").html("down_count : "+down_count+" / up_count : "+
+          up_count);
+        }
+      )
+
+      $("#input>input[type='text']").keyup(
+        function () {
+          //down_count 변수 증가
+          up_count++;
+          $("#result").html("down_count : "+down_count+" / up_count : "+
+          up_count);
+        }
+      )
+    });
+  </script>
+
+</head>
+<body>
+  <h1>키 이벤트</h1>
+  <div id="input">
+    <input type="text">
+  </div>
+  <h2>결과</h2>
+  <div id="result">  
+</body>
+</html>

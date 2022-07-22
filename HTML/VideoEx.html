@@ -1,0 +1,104 @@
+<!--
+  1.div 오른쪽 정렬
+  2.div들 왼쪽 최소값 설정
+  3.copyrigth 오른쪽 최대값 설정
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+  <style>
+    .myvideo1{
+      width: 100%;
+      max-width: 640px;
+      min-width: 320px;
+      height: auto;
+    }
+
+    .hr1{
+      height: 3px; width: 90%; border-color:mediumpurple; border-radius: 2em; background-color: ghostwhite;
+    }
+
+    .bumwi{
+      max-width: 640px; text-align:center;
+    }
+
+    html, body { margin: 10px; padding: 0; height: 100%; background-color: yellow ;}
+    .aside{width: 15%;float: right;}
+    @media screen and (max-width: 640px) {
+      #outer_btn_right {
+        display: none;
+     }
+    } 
+
+    #wrapper{
+    height: 100%;
+    min-height: 780px;
+    max-width: 640px;
+    width: 100%;
+    border-radius: 1em;
+    background-color: olivedrab;
+    opacity: 1;
+    display: inline-block;
+
+    }
+    #footer{
+    height: 100px;
+    width: 100%;
+    bottom: 0;
+    background-color: plum;
+    border-radius: 1em;
+    }
+  </style>
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>비디오 삽입</title>
+  </head>
+  <body>
+
+    <div style="background-color: black; max-width: 640px; height: 50px; border-radius: 1em;">
+      <div style="display: inline-block; margin-top: 15px; margin-left: 15px; background-color: crimson;">
+        <a href="https://www.youtube.com" ><img src="./img/youtube_logo.png" alt="" width="80" height="20"></a>
+      </div>
+      <div style="background: blue; display: inline-block;">
+        <img src="./img/apple.png" alt="유저 아이콘" width="30" height="30" >
+      </div>
+      머리부분
+    </div>
+
+    <div id="wrapper">
+      <h3 class="bumwi">沙花叉クロヱ MV - 「耀かし」  </h3>
+      <hr align="left" style="max-width: 640px;">
+      <video class="myvideo1" src="media/chloe.mp4" width="640" height="360" controls loop autoplay muted></video>
+      <br><br>
+      <fieldset style="border-radius:3em ; max-width: 610px;">
+        <h3 class="bumwi">클로에 특별 음성</h3>
+
+        <div style="text-align:center;">
+          沙花叉クロヱ誕生日記念2022_ふたりじめビーチ <br>
+          <audio src="./media/沙花叉クロヱ誕生日記念2022_ふたりじめビーチ.wav"controls ></audio>
+          <hr class="hr1">
+          沙花叉クロヱ誕生日記念2022_夕暮れの電車で <br>
+          <audio src="./media/沙花叉クロヱ誕生日記念2022_夕暮れの電車で.wav"controls></audio>
+        </div>
+
+          <br><br>
+      </fieldset>
+    </div>
+
+    <div class="aside" id="outer_btn_right">
+      <a href="https://www.youtube.com/channel/UCIBY1ollUsauvVi4hW4cumw" target="_blank" style="position: fixed; top: 90px  ;"><img src="./img/channels4_profile.jpg" alt="클로에유튜브로고" width="65px" height="65px"></a>
+    </div>
+
+  <footer id="footer">
+    <div>
+      <br>
+      <hr>
+      copyright@
+    </div>
+  </footer>
+
+</body>
+</html>

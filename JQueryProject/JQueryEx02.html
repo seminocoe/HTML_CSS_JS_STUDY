@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script type="text/javascript" 
+    src="../js/jquery-1.11.0.js"></script>
+    <script>
+        /*
+        initPage에게는 "$"라는 객체(혹은 함수)가 파라미터로 전달됨
+        $ : jQuery의 모든 기능을 저장하고 있는 jQuery의 최상위의 객체를 의미함.
+        */
+        function initPage() {
+           // var h1 = document.getElementById("hello");
+           var h1 = $("#hello");
+
+           // h1.innerHTML="Hello JQuery";
+           h1.html("Hello jQuery");
+        }
+
+        // 페이지가 열리면서 자동으로 실행되는 
+        // 크로스 브라우징을 지원하는 코드임
+        $(function () {
+            $("#hello").html("Hello jQuery");
+            alert($("#text").html());
+        });
+
+        // jQuery(initPage);
+
+        // 함수 이름 대신 함수 자체를 파라미터로 전달
+        
+        /*
+        jQuery(function ($) {
+           var h1 = $("#hello");
+           h1.html("Hello jQuery");
+        });
+        */
+
+    </script>
+</head>
+<body>
+    <h1 id="hello"></h1>
+    <p id="text">안녕하세요. jQuery</p>
+</body>
+
+</html>

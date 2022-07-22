@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>마우스 이벤트</title>
+
+  <link rel="stylesheet" type="text/css"
+   href="../css/event.css">
+
+  <script type="text/javascript" 
+src="../js/jquery-1.11.0.js"></script>
+<script>
+$(function() {
+  //마우스 버튼을 누른 경우
+  $("#input").mousedown(function () {
+    $("#result").html("Mouse Down Event ~~~~");
+  });
+  //마우스 버튼을 띄운 경우
+  $("#input").mouseup(function () {
+    $("#result").html("Mouse Up Event ~~~~");
+  });
+//   //마우스가 영역위에 있을 때
+//   $("#input").mouseenter(function () {
+//     $("#result").html("Mouse Enter Event ~~~~");
+//   });
+//   //마우스가 영역위에 벗어났을 때
+//   $("#input").mouseleave(function () {
+//     $("#result").html("Mouse Leave Event ~~~~");
+//   });
+
+//마우스가 영역위에 있을 때 나갈때 호버 버전(한번에 가능)
+$("#input").hover(function () {
+  $("#result").html("Mouse Enter Event ~~~~");
+},
+function () {
+  $("#result").html("Mouse Leave Event ~~~~");
+});
+})
+
+</script>
+</head>
+<body>
+  <h1>마우스 이벤트</h1>
+  <div id="input">
+    Do it in Here ~~~~~~ !!!!
+  </div>
+  <h2>결과</h2>
+  <div id="result">
+
+  </div>
+</body>
+</html>

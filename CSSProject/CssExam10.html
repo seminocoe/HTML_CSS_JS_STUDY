@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>z-index 설정</title>
+
+    <style>
+        div { position: absolute; }
+        img { position: absolute; }
+        #spadeA { z-index: -3; left: 10px; top: 20px;}
+        #spade2 { z-index: 2; left: 40px; top: 30px;}
+        #spade3 { z-index: 3; left: 80px; top: 40px;}
+        #spade7 { z-index: 7; left: 120px; top: 50px;}
+
+        
+        /* 리스트 메뉴 꾸미기 */
+        #menubar { background: olive; }   
+        
+        #menubar ul { margin: 0; padding: 0; width: 567px; }
+
+        #menubar ul li { display: inline-block; 
+                         list-style-type: none;
+                         padding: 0px 10px; }
+
+        #menubar ul li a { color: white; text-decoration: none; }
+
+        #menubar ul li a:hover { color: violet; }
+
+    </style>
+
+</head>
+<body>
+    <h3>z-index</h3>
+    <hr>
+    <div>
+        <img id="spadeA" src="../img/spade-A.png" 
+        width="100px" height="140px" alt="스페이드A">
+        <img id="spade2" src="../img/spade-2.png" 
+        width="100px" height="140px" alt="스페이드2">
+        <img id="spade3" src="../img/spade-3.png" 
+        width="100px" height="140px" alt="스페이드3">
+        <img id="spade7" src="../img/spade-7.png" 
+        width="100px" height="140px" alt="스페이드7">
+    </div>
+    
+    <br><br><br><br><br><br><br><br><br><br>
+    <hr>
+    <nav id="menubar">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Espresso</a></li>
+            <li><a href="#">Cappuccino</a></li>
+            <li><a href="#">Cafelatte</a></li>
+            <li><a href="#">F.A.Q</a></li>
+        </ul>
+    </nav>
+
+</body>
+</html>

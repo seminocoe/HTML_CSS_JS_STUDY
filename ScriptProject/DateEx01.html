@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>날짜</title>
+  <script>
+    //현재 요일을 출력
+    var days = ["일", "월", "화", "수", "목", "금", "토"];
+
+    var mydate = new Date();
+    
+    //임의의 날짜 지정
+    mydate.setFullYear(2023);
+    mydate.setMonth(6);
+    mydate.setDate(25);
+    mydate.setHours(12);
+    mydate.setMinutes(10);
+    mydate.setSeconds(10);
+
+    var yy = mydate.getFullYear();
+    
+    var mm = mydate.getMonth()+1;
+    var dd = mydate.getDate();
+
+    var i = mydate.getDay();
+    var day = days[i];
+    
+    var hh = mydate.getHours();
+    var mi = mydate.getMinutes();
+    var ss = mydate.getSeconds();
+
+    var result = yy+"-"+mm+"-"+dd+day+"요일"+hh+":"+mi+":"+ss;
+    document.write("<h1>"+result+"</h1>");
+
+    //두 날짜의 차이
+    var theday = new Date(2022,0,1);
+    var today = new Date();
+
+    var cnt = today.getTime() - theday.getTime();
+
+    var dday = Math.floor(cnt/(24*60*60*1000));
+
+    document.write("<h1> 올해는 "+dday+"일 지났습니다.</h1>");
+  </script>
+</head>
+<body>
+  
+</body>
+</html>

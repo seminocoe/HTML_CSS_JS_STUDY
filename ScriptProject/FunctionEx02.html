@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>함수</title>
+  <script>
+    var str="100+1";
+    document.write("<h1>str:"+str+"</hr>");
+    var result=eval("100+1");
+    //eval : 문자열을 수식으로 변환해주는 함수(내장함수)
+    document.write("<h1>result:"+result+"</hr>");
+    
+    var value="100";
+    var num1=Number(value);
+    //Number() : 문자열 변수가 숫자모양일경우 실제 숫자형으로 변환시킴
+    var num2=parseInt(value);
+    //parseInt() : 문자열 변수가 숫자모양일경우 실제 숫자형으로 변환시킴
+
+    var r1 = value+1;
+    //글자+숫자 = 글자+글자 =모두 합친 글자
+    var r2 = num1+1;
+    //숫자 + 숫자 = 모두 더한 숫자
+    var r3 = num2+1;
+    //숫자 + 숫자 = 모두 더한 숫자
+    document.write("<h1>r1:"+r1+"</hr>");
+    document.write("<h1>r2:"+r2+"</hr>");
+    document.write("<h1>r3:"+r3+"</hr>");
+      
+      var valu = "100.6";
+      var n1 = Number(valu);
+      //실수형일 때 문자열 그대로 실수값을 리턴함
+      var n2 = parseInt(valu);
+      //parseInt는 정수만 반환함
+      var res1 = n1+1;
+      var res2 = n2+1;
+      document.write("<h1>res1:"+res1+"</hr>");
+      document.write("<h1>res2:"+res2+"</hr>");
+
+  </script>
+</head>
+<body>
+  
+</body>
+</html>

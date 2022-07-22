@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <script type="text/javascript" src="../js/jquery-1.11.0.js">//이거 해줘야 제이쿼리를 사용할 준비가 됌</script>
+  <script>
+    function initPage() {
+      var h1 = document.getElementById("hello");
+      h1.style.color="#0000ff";
+      h1.style.backgroundColor="#d5d5d5";
+      h1.style.fontSize="50px";
+      h1.style.padding="15px";
+      h1.style.margin="0";
+      h1.innerHTML="Hello JQuery";
+
+    }
+
+    function sayHello() {
+      alert("안녕하세요. 제이쿼리입니다.");
+    }
+
+    //sayHello();원랜 이렇게 했음
+    //javascript의 onload 이벤트 효과와 동일하다.
+    jQuery(sayHello);
+    jQuery(initPage);
+  </script>
+</head>
+<body>
+  <h1 id="hello"></h1>
+</body>
+</html>
