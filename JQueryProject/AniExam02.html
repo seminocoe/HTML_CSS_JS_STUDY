@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Animate</title>
+  <style>
+    #box{
+      background: #98bf21;
+      width: 100px;
+      height: 100px;
+      position: absolute;
+      left: 0;
+    }
+  </style>
+  <script type="text/javascript" 
+  src="../js/jquery-1.11.0.js"></script>
+  <script>
+    $(function(){
+      $("button:eq(0)").click(function(){
+        //새로운 내용으로 교체
+        $("#animation-area").html("<div id='box'></div>");
+      });
+      //좌측으로 부터 250px 만큼 div 이동
+      $("button:eq(1)").click(function(){
+        //css 속성은 json형식으로 표현함
+        $("#box").animate({
+          left : '250px'
+        }, 1000, 'swing', function(){
+          alert("애니메이션이 종료 되었습니다.")
+        });
+      });
+      //좌측으로 부터 250px 이동하고, 높이와 넓이를 150px로 변환
+      $("button:eq(2)").click(function(){
+        //css 속성은 json형식으로 표현함
+        $("div").animate({
+          left : '250px',
+          height: '150px',
+          width: '150px'
+        });
+      });
+
+      //좌측으로 부터 50px 이동하고, 높이와 넓이를 50px로 변환
+      $("button:eq(3)").click(function(){
+        //css 속성은 json형식으로 표현함
+        $("div").animate({
+          left : '+=20px',
+          height: '+=50px',
+          width: '+=50px'
+        },300);
+      });
+
+      //
+      $("button:eq(4)").click(function(){
+        var div =$("#box");
+        //애니메이션을 연속적으로 사용
+        //여러개의 장면이 순차적으로 실행됨
+        div.animate({height : '300px'},1000);
+        div.animate({width : '300px'},500);
+        div.animate({height : '100px'},800);
+        div.animate({width : '100px'},300);
+        
+      });      
+
+    });
+  </script>
+</head>
+<body>
+  <h1>Animate</h1>
+  <button>
+    Reset
+  </button>
+  <button>
+    Ani1
+  </button>
+  <button>
+    Ani2
+  </button>
+  <button>
+    Ani3
+  </button>
+  <button>
+    Ani4
+  </button>
+  <div id="animation-area">
+    <div id="box">
+
+    </div>
+  </div>
+</body>
+</html>

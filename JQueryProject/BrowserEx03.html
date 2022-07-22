@@ -9,6 +9,17 @@
   href="../css/scroll.css">
   <script type="text/javascript" 
   src="../js/jquery-1.11.0.js"></script>
+  <script>
+    $(function(){
+      $(window).scroll(function(){
+        $("#console").html("스크롤이 이동 되었습니다.");
+        setTimeout(function(){
+          //1.5초 후에 div 아이디가 console을 내용을 지우게 함
+          $("#console").html("");
+        }, 1500);
+      });
+    });
+  </script>
 </head>
 <body>
   <div class="gradientStyle">
