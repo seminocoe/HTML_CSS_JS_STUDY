@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Map</title>
+  <link rel="stylesheet" type="text/css" href="../css/common.css">
+  <link rel="stylesheet" type="text/css" href="../css/reset.css">
+  <script type="text/javascript" src="../js/jquery-1.11.0.js"></script>
+
+  <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=true"></script>
+  <script type="text/javascript" src="../js/gmaps.js"></script>
+
+  <style>
+    #map{width: 100%; height: 480px;}
+  </style>
+
+  <script>
+    var map = null;
+
+    var lat =37.51528;
+    var lng =126.9075611;
+
+    $(function(){
+      map = new GMaps({
+        "el": '#map',
+        "lat":lat,
+        "lng":lng,
+        "zoomControl":true
+      });
+
+      map.addMarker({
+        "lat":lat,
+        "lng":lng,
+        "title":'글로벌인',
+        "click": function(e){
+          console.log(e);
+        },
+        "mouseover":function(e){
+          console.log(e);
+        },
+        "infoWindow" :{
+          "content":'<p>글로벌 인</p>'
+        }
+      });
+    });
+
+  </script>
+</head>
+<body>
+  <h1 class="title">구글 맵</h1>
+  <div class="exaple">
+    <div id="map"></div>
+  </div>
+</body>
+</html>
